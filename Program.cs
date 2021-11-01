@@ -9,7 +9,7 @@ namespace EFInClass
         static void Main(string[] args)
         {
             var exit = false;
-            while(!exit)
+            while (!exit)
             {
                 Console.Clear();
                 System.Console.WriteLine("1. Display Blogs");
@@ -18,13 +18,13 @@ namespace EFInClass
                 System.Console.WriteLine("4. Add Post");
                 var choice = Console.ReadLine();
                 // display blogs
-                if(choice == "1")
+                if (choice == "1")
                 {
                     Console.Clear();
                     using (var db = new BlogContext())
                     {
                         var blogs = db.Blogs;
-                        foreach(var blog in blogs)
+                        foreach (var blog in blogs)
                         {
                             System.Console.WriteLine("{0}. {1}", blog.BlogID, blog.Name);
                         }
@@ -32,7 +32,7 @@ namespace EFInClass
                     Console.ReadKey();
                 }
                 // add blog
-                else if(choice == "2")
+                else if (choice == "2")
                 {
                     Console.Clear();
                     System.Console.WriteLine("Name of new Blog: ");
@@ -50,7 +50,7 @@ namespace EFInClass
                     Console.ReadKey();
                 }
                 // display posts
-                else if(choice == "3")
+                else if (choice == "3")
                 {
                     Console.Clear();
                     using (var db = new BlogContext())
@@ -73,7 +73,7 @@ namespace EFInClass
                     Console.ReadKey();
                 }
                 // add post
-                else if(choice == "4")
+                else if (choice == "4")
                 {
                     Console.Clear();
                     using (var db = new BlogContext())
@@ -104,12 +104,6 @@ namespace EFInClass
                     exit = true;
                 }
             }
-
-
-
-
-
-
         }
     }
 }
