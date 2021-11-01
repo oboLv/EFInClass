@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace EFInClass.Models
 {
@@ -9,6 +8,6 @@ namespace EFInClass.Models
     {
         public int BlogID { get; set; }
         public string Name { get; set; }
-        public List<Post> Post { get; set; }
+        public List<Post> Posts { get; set; }
     }
 }
